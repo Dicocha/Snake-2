@@ -1,6 +1,5 @@
 # Este programa se basa en https://www.geeksforgeeks.org/snake-game-in-python-using-pygame-module/ 
 # Librerias
-from cmath import e
 import pygame, random, pymysql
 from pygame.locals import *
 
