@@ -1,5 +1,5 @@
 # Libraries
-import sys
+import sys, os
 from time import sleep
 import pygame, random, pymysql
 from pygame.locals import *
@@ -38,6 +38,11 @@ class Screens:
 		global bg_img
 		bg_img = pygame.image.load('Recourses/bg.jpg')
 		bg_img = pygame.transform.scale(bg_img,(Win_x,Win_y))
+
+		# Music
+		pygame.mixer.music.load('Recourses/menu.mp3')
+		pygame.mixer.music.play(-1)
+
 
 		click = False
 		
@@ -182,9 +187,9 @@ class Screens:
 		Direccion = 'RIGHT'
 		change_to = Direccion
 
-		#Musica
-		# music = pygame.mixer.Sound("")
-		# music.play()
+		# Music
+		pygame.mixer.music.load('Recourses/gameplay.mp3')
+		pygame.mixer.music.play(-1)
 
 		while True:
 			# handling key events
